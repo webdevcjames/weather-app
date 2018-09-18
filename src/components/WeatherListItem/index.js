@@ -14,16 +14,17 @@ export const WeatherListItem = ({ item, onSelect }) => {
 
 	const isValidTemp = isNumber(parseInt(actual)) && !isNaN(parseInt(actual))
 
+	// Just a little colour-coding for the temperatures
 	const temperatureColor = isValidTemp
 		? (parseInt(actual) > 39
 			? "#df3737"
 			: (parseInt(actual) > 29
 				? "#ef9f2f"
 				: (parseInt(actual) > 19
-					? "#6fcf4f"
+					? "#4faf3f"
 					: (parseInt(actual) > 9
 						? "#5f9fef"
-						: "#3f3fbf"))))
+						: "#2f4fcf"))))
 		: undefined
 
 

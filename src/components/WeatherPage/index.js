@@ -25,10 +25,10 @@ export const WeatherPage = ({ onClose, open, selectedItem = {} }) => {
 			: (parseInt(actual) > 29
 				? "#ef9f2f"
 				: (parseInt(actual) > 19
-					? "#6fcf4f"
+					? "#4faf3f"
 					: (parseInt(actual) > 9
 						? "#5f9fef"
-						: "#3f3fbf"))))
+						: "#2f4fcf"))))
 		: undefined
 
 

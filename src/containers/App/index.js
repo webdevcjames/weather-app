@@ -78,7 +78,7 @@ export class App extends Container {
 	}
 
 
-
+	// Best filtering solution I could come up with at the time, and somewhat flexible
 	filterData(data) {
 		const validFilters = pickBy(this.state.filters, filter => !isEmpty(filter))
 
@@ -92,6 +92,7 @@ export class App extends Container {
 
 
 
+	// Abstracted processData just so it was easier to reuse
 	processData(data) {
 		const sanitisedData = this.sanitiseData(data)
 
@@ -125,7 +126,7 @@ export class App extends Container {
 				feelsLike,
 			},
 			lastUpdated,
-		})).filter(({ temperature: { actual, feelsLike }, weather }) => (!!actual && !!feelsLike) || !!weather)
+		})).filter(({ temperature: { actual, feelsLike }, weather }) => (!!actual && !!feelsLike) || !!weather) // Thought I should omit any results that hove no weather information at all
 	}
 
 
@@ -200,6 +201,7 @@ export class App extends Container {
 
 
 
+	// I would normally mount/unmount components like WeatherPage rather than keeping them rendered, but for the sake of the transitions, I left them rendered
 	render() {
 		const { conditions, countries, filters, filtersOpen, items, lastUpdated, selected, sortDir, sortType } = this.state
 

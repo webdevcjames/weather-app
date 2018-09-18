@@ -29,12 +29,15 @@ export const FilterBar = ({ conditions, countries, filters, onToggleFilter, onTo
 
 
 
+	// Had considered a tab or accordion structure for the filter list, but for the size of the list as is, decided to keep it simple with grouping the list
 	return (
 		<div className={`filter-bar ${open ? "open" : ""}`.trim()}>
 			<div className="filter-bar-button" onClick={toggle}>
 				{open ? <i className="material-icons">keyboard_arrow_down</i> : "Filter"}
 			</div>
 			<FilterOptions>
+				{countries &&
+					<div className="filter-group"><div className="filter-group-heading">Countries</div></div>}
 				{countries && map(countries, (country, key) => (
 					<FilterOption
 						key={key}
@@ -44,6 +47,8 @@ export const FilterBar = ({ conditions, countries, filters, onToggleFilter, onTo
 					  {country}
 					</FilterOption>
 				))}
+				{conditions &&
+					<div className="filter-group"><div className="filter-group-heading">Weather Conditions</div></div>}
 				{conditions && conditions.map(condition => (
 					<FilterOption
 						key={condition}
