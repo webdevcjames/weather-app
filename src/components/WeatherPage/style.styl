@@ -1,0 +1,101 @@
+.selected-weather
+	box-sizing border-box
+
+	display flex
+	
+	flex-direction column
+	
+	flex 0 0 0
+	
+	background-color #efefef
+	
+	overflow hidden
+	
+	&.open
+		flex 1 0 0
+		
+	.weather-list-item
+		cursor default
+		
+		.weather-content, .weather-temperature
+			opacity 0.875
+		
+		&:hover
+			.weather-content, .weather-temperature
+				opacity 0.875
+	
+.selected-weather-button
+	display flex
+	
+	align-items center
+	
+	flex 0 0 48px	
+	
+	justify-content center
+	
+	background-color #f7f7f7
+	
+	font-size 18px
+
+	color rgba(31, 31, 31, 0.5)
+	
+	border-bottom 1px solid #d7d7d7
+	
+	transition color 0.25s
+	
+	cursor pointer
+	
+	&:hover
+		color rgba(31, 31, 31, 1)
+	
+	.material-icons
+		padding 6px
+		
+		font-size 32px
+
+
+.selected-weather-info
+	display flex
+	
+	flex-direction column
+	
+	flex 1 1 auto
+	
+	padding 16px
+	
+	overflow-x hidden
+	overflow-y auto
+	
+.weather-details
+	display flex
+	
+	border-bottom 1px solid #d7d7d7
+	
+.weather-detail
+	display flex
+	
+	flex-direction column
+	
+	flex 1 0 0
+	
+	padding 16px
+	
+	opacity 0.875
+		
+.weather-detail-heading
+	font-weight 500
+	
+.weather-detail-value
+	padding-top 6px
+	
+.weather-updated
+	flex 0 0 auto
+	
+	padding 16px
+	
+	font-size 18px
+	
+	text-align center
+	
+	opacity 0.875
+	

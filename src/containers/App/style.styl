@@ -1,0 +1,84 @@
+@import "../../stylus/main.styl"
+
+
+
+.app-wrapper
+	display flex
+	
+	flex-direction column
+	
+	flex 1 0 auto
+	
+	height 100%
+	
+.app-content
+  display -moz-box
+	display flex
+	
+	-moz-flex-direction column
+	flex-direction column
+	
+	-moz-flex-grow 1
+	-moz-flex-shrink 1
+	-moz-flex-basis auto
+	flex 1 1 auto
+	
+.list-view
+  display -moz-box
+	display flex
+	
+	-moz-flex-direction column
+	flex-direction column
+
+	-moz-flex-grow 1
+	-moz-flex-shrink 0
+	-moz-flex-basis 0
+	flex 1 0 0
+	
+	min-height 0
+	
+	overflow hidden
+	
+	transition flex 0.25s
+	
+	&.closed
+		-moz-flex-grow 0
+		-moz-flex-shrink 0
+		-moz-flex-basis 0
+		flex 0 0 0
+	
+
+.weather-list-wrapper
+  display -moz-box
+	display flex
+	
+	-moz-flex-direction column
+	flex-direction column
+	
+	-moz-flex-grow 1
+	-moz-flex-shrink 0
+	-moz-flex-basis 0
+	flex 1 0 0
+	
+	overflow hidden
+	
+	min-height 0
+	
+	transition flex 0.25s
+	
+	&.closed
+		-moz-flex-grow 0
+		-moz-flex-shrink 0
+		-moz-flex-basis 0
+		flex 0 0 0
+	
+
+.app-last-refreshed
+	padding 4px 16px
+	
+	background-color rgba(15, 15, 15, 1)
+	background-image linear-gradient(to top, rgba(47, 47, 47, 1) 0%, rgba(47, 47, 47, 0) 100%)
+
+	color #efefef
+
+	text-align center

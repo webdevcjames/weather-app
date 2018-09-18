@@ -1,0 +1,59 @@
+.filter-bar
+	box-sizing border-box
+
+	display -moz-box
+	display flex
+	
+	-moz-flex-direction column
+	flex-direction column
+	
+	-moz-flex-grow 0
+	-moz-flex-shrink 0
+	-moz-flex-basis 48px
+	flex 0 0 48px
+	
+	overflow hidden
+		
+	background-color #efefef
+
+	border-top 1px solid #d7d7d7
+	
+	&.open
+		-moz-flex-grow 1
+		-moz-flex-shrink 0
+		-moz-flex-basis 48px
+		flex 1 0 48px
+		
+		border-top none
+		
+	
+.filter-bar-button
+	display flex
+	
+	align-items center
+	
+	flex 0 0 48px
+	
+	justify-content center
+	
+	background-color #f7f7f7
+	
+	font-size 18px
+
+	color rgba(31, 31, 31, 0.5)
+	
+	border-bottom 1px solid #d7d7d7
+	
+	transition color 0.25s
+	
+	cursor pointer
+
+	-webkit-tap-highlight-color transparent
+	
+	&:hover
+		color rgba(31, 31, 31, 1)
+	
+	.material-icons
+		padding 6px
+		
+		font-size 32px
