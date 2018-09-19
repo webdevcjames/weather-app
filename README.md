@@ -40,4 +40,4 @@ Or yarn:
 $ yarn start
 ```
 
-You should now be able to view the app running on `http://localhost:3000/`
+You should now be able to view the app running on `http://localhost:3000/`, preferably on Firefox or Chrome.
