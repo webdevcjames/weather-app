@@ -28,7 +28,7 @@ $ yarn
 
 #### Running
 
-From then, you may start the app, again using either npm:
+From there, you may start the app, again using either npm:
 
 ```bash
 $ npm run start
